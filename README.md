@@ -1,19 +1,19 @@
 # 📡 Telecom RAG Chatbot
 
-An AI-powered Telecom Customer Support Chatbot built with **Python**, **Streamlit**, and **Retrieval-Augmented Generation (RAG)**. The application provides an interactive web interface where users can ask telecom-related questions and receive accurate, context-aware answers retrieved from telecom documentation, FAQs, and historical customer support tickets.
+An AI-powered Telecom Customer Support Chatbot built with **Python**, **Streamlit**, and **Retrieval-Augmented Generation (RAG)**. The application provides an interactive web interface where users can ask telecom-related questions and receive accurate, context-aware answers by retrieving information from telecom documentation, FAQs, and historical customer support tickets.
 
 ---
 
 ## 🚀 Features
 
-- 🤖 AI-powered customer support chatbot
+- 🤖 AI-powered telecom customer support chatbot
 - 💬 Interactive web interface built with Streamlit
 - 📄 Retrieval-Augmented Generation (RAG)
 - 🔍 Semantic search using ChromaDB
 - 📚 Knowledge retrieval from telecom documentation (PDF)
 - ❓ FAQ-based question answering
 - 🎫 Customer ticket history retrieval
-- ⚡ Fast and context-aware responses
+- ⚡ Fast, accurate, and context-aware responses
 
 ---
 
@@ -25,6 +25,13 @@ An AI-powered Telecom Customer Support Chatbot built with **Python**, **Streamli
 - ChromaDB
 - SQLite
 - Pandas
+
+---
+
+## 📋 Prerequisites
+
+- Python 3.10 or later
+- pip
 
 ---
 
@@ -45,10 +52,9 @@ Telecom-RAG-Chatbot/
 │   ├── faq.csv
 │   └── tickets.db
 │
-├── chroma_store/             # Vector database (generated)
+├── chroma_store/             # Generated vector database
 ├── README.md
 ├── LICENSE
-├── requirements.txt
 └── .gitignore
 ```
 
@@ -68,15 +74,17 @@ git clone https://github.com/stuti191/Telecom-RAG-Chatbot.git
 cd Telecom-RAG-Chatbot
 ```
 
-### 3. Install dependencies
+### 3. Install the required dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install streamlit langchain chromadb pandas
 ```
 
-### 4. Build the vector database
+> Install any additional libraries if prompted while running the application.
 
-Run the ingestion scripts to populate the knowledge base:
+### 4. Build the knowledge base
+
+Run the ingestion scripts to populate the vector database:
 
 ```bash
 python ingest_pdf.py
@@ -94,7 +102,7 @@ streamlit run app.py
 
 ## 📂 Knowledge Sources
 
-The chatbot retrieves information from multiple sources:
+The chatbot retrieves information from multiple data sources:
 
 - 📄 Telecom documentation (PDF)
 - ❓ Frequently Asked Questions (CSV)
@@ -107,9 +115,9 @@ The chatbot retrieves information from multiple sources:
 - Multi-turn conversation memory
 - Voice-based interaction
 - Multi-language support
-- Authentication and user profiles
-- Live LLM integration
-- Cloud deployment
+- User authentication
+- Integration with cloud-hosted LLMs
+- Deployment on Streamlit Cloud
 
 ---
 
